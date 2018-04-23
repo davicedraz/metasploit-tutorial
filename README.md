@@ -41,7 +41,7 @@ Agora você pode iniciar o seu Kali. Seu nome de usuário padrão será **root**
 
 ![Baixar Kali Linux](img/start_kali_os.jpg)
 
-4. Para verificar que já podemos usar nosso poderoso framwork, abra o console do Metasploit no Kali seguindo o caminho: Aplicativos → Ferramentas de exploração → Metasploit.
+4. Para verificar que já podemos usar nosso poderoso framework, abra o console do Metasploit no Kali seguindo o caminho: Aplicativos → Ferramentas de exploração → Metasploit.
 
 Ou digite o seguinte comando no terminal:
 > msfconsole
