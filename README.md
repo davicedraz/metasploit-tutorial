@@ -61,3 +61,7 @@ https://www.tutorialspoint.com/metasploit/metasploit_environment_setup.htm
 https://www.hackingtutorials.org/metasploit-tutorials/metasploit-commands/
 
 http://blog.corujadeti.com.br/tutorial-detalhado-em-guia-pratico-do-metasploit-copiado/
+
+[Tirar Screenshot](https://www.offensive-security.com/metasploit-unleashed/screen-capture/)
+
+[Hackear Webcam](https://null-byte.wonderhowto.com/how-to/hack-like-pro-secretly-hack-into-switch-on-watch-anyones-webcam-remotely-0142514/)
