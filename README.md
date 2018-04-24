@@ -14,10 +14,14 @@ Trata-se de uma das ferramentas mais poderosas e amplamente utilizadas para test
 - Utilizar o payload meterpreter para criar uma sessão em um alvo Windows
 
 
-### Metasploit
+### Conceitos
 
 O framework contém um repositório de exploits (códigos executáveis capazes de aproveitar as vulnerabilidades de sistemas em um computador local ou remoto).
 A maioria de seus recursos pode ser encontrada em - www.metasploit.com. 
+
+- Exploits
+
+- Payloads
 
 Está disponível em duas versões: edição comercial e gratuita. Não há grandes diferenças nas duas versões, portanto, neste tutorial, usaremos principalmente a versão Community (gratuita) do Metasploit.
 
@@ -53,6 +57,8 @@ Ou digite o seguinte comando no terminal:
 
 
 #### Links de referência:
+
+http://www.khromozome.com/how-to-hack-windows-10-using-kali-linux/
 
 https://linuxhint.com/metasploit-tutorial/
 
