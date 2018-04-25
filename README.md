@@ -68,7 +68,7 @@ Agora que já conhecemos nossa vítima e configuramos o ambiente atacante, é ho
 
 ...
 
-
+**Para fazer o download deste tutorial em PDF, [clique aqui](https://github.com/davicedraz/metasploit).**
 
 #### Links de referência:
 
