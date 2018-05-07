@@ -34,16 +34,19 @@ Agora você pode iniciar o seu Kali. Seu nome de usuário padrão será **root**
 
 ![Baixar Kali Linux](img/start_kali_os.jpg)
 
-## Iniciando o Metasploit
+## Ataque
+Agora que já conhecemos nossa vítima e configuramos o ambiente atacante, é hora de realizarmos os ataques. 
 
-No seu Kali Linux devidamenta instalado, abra o console do Metasploit no Kali seguindo o caminho: Aplicativos → Ferramentas de exploração → Metasploit.
+Neste tutorial realizaremos as seguintes ações: 
+- Tirar uma screenshot da tela da vítima.
+- Tirar uma foto através da webcam da vítima.
+- Capturar o stream de vídeo da webcam da vítima.
 
-Ou em qualquer OS que tenha instalado o Metasploit, digite o seguinte comando no terminal:
-> msfconsole
+## A vítima
 
+Como a simulação de um cenário real, utilizamos uma virtualização do **Windows 10 Home Edition**. Esta escolha foi feita pensando em uma situação que melhor representa uma situação do cotidiano, já que, segundo o [StatCounter]( http://gs.statcounter.com/press/android-overtakes-windows-for-first-time) o Windows é o segundo sistema operacional mais utilizado, perdendo apenas para o Android. 
 
-### A vítima
-Neste tutorial utilizamos uma virtualização do **Windows 10 Home Edition**. Esta escolha foi feita pensando em uma situação que melhor representa uma situação do cotidiano, já que, segundo o [StatCounter]( http://gs.statcounter.com/press/android-overtakes-windows-for-first-time) o Windows é o segundo sistema operacional mais utilizado, perdendo apenas para o Android. Desta forma, sendo o Windows 10 a versão mais recente do sistema da Microsoft o escolhemos para mostrar que a ferramenta Metasploit pode ser utilizada até mesmo em um sistema comercial e supostamente seguro como o Windows 10.
+Desta forma, sendo o Windows 10 a versão mais recente do sistema da Microsoft o escolhemos para mostrar que a ferramenta Metasploit pode ser utilizada até mesmo em um sistema comercial e supostamente seguro como o Windows 10.
 Segundo a Microsoft, todas as vulnerabilidades do Windows 10 foram consertadas. De fato, os esforços da empresa dificultaram o uso de exploits remotos. Em nossas pesquisas, não foram encontradas formas de infectar uma máquina Windows 10 através de exploits remotos. Por isso, infectaremos a máquina da vítima através de um **Trojan**.
 
 ### Trojan
@@ -52,11 +55,18 @@ O Trojan se passa por um programa que simula alguma funcionalidade útil quando 
 Os dois tipos mais comuns de Trojans são os Keyloggers (que normalmente são utilizados para roubar senhas) e os Backdoors (arquivos que possibilitam aberturas de portas para invasão). Diferente dos Vírus e Worms, eles normalmente não se auto copiam, não necessitam infectar outros programas para executar suas funções: eles são autônomos necessitando apenas ser executados.
 
 
-### Ataque
-Agora que já conhecemos nossa vítima e configuramos o ambiente atacante, é hora de realizarmos os ataques. Neste tutorial realizaremos as seguintes ações: 
-- Tirar uma screenshot da tela da vítima.
-- Tirar uma foto através da webcam da vítima.
-- Capturar o stream de vídeo da webcam da vítima.
+
+
+### Gerar Payload
+
+
+### Iniciando o Metasploit
+
+No seu Kali Linux devidamenta instalado, abra o console do Metasploit no Kali seguindo o caminho: Aplicativos → Ferramentas de exploração → Metasploit.
+
+Ou em qualquer OS que tenha instalado o Metasploit, digite o seguinte comando no terminal:
+
+> msfconsole
 
 ...
 
