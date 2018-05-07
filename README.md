@@ -223,7 +223,7 @@ Como previsto na  **Lei 12.737/2012 no Art. 154-A**. Invadir dispositivo inform�
 
 Lei Nº 12.737, de 30 de novembro de 2012.
 
-**Para fazer o download deste tutorial em PDF, [clique aqui](https://github.com/davicedraz/metasploit).**
+**Para fazer o download deste tutorial em PDF, [clique aqui](https://github.com/davicedraz/metasploit/raw/master/README.pdf).**
 
 
 ## Links de referência:
