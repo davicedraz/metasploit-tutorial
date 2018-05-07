@@ -11,8 +11,8 @@ A maioria de seus recursos pode ser encontrada em - www.metasploit.com.
 Neste tutorial, apresentamos os comandos principais para uso do framework Metasploit assim como um exemplo de ataque obtendo acesso remoto ao computador da vítima e realizar as seguintes ações:
 
 - Tirar uma screenshot da tela da vítima. 
-- 
--  Monitorar em tempo real a tela da vítima. da vítima
+- Capturar um stream de vídeo da webcam da vítima.
+- Monitorar em tempo real a tela da vítima.
 
 ## Instalação
 
