@@ -10,21 +10,13 @@ A maioria de seus recursos pode ser encontrada em - www.metasploit.com.
 
 Neste tutorial, apresentamos os comandos principais para uso do framework Metasploit assim como um exemplo de ataque obtendo acesso remoto ao computador da vítima e realizar as seguintes ações:
 
-- Tirar uma screenshot da tela da vítima.
-- Tirar uma foto através da webcam da vítima.
-- Capturar o stream de vídeo da webcam da vítima.
+- Tirar uma screenshot da tela da vítima. 
+- 
+-  Monitorar em tempo real a tela da vítima. da vítima
 
 ## Instalação
 
 A distribuição Kali Linux possui a versão da comunidade Metasploit embutida e centenas de outras ferramentas que facilitam os passos deste tutorial. 
-
-Mas se você quiser instalar o Metasploit como uma ferramenta separada, você pode fazê-lo facilmente em sistemas executados no Linux ou Mac OS X:
-
-```
-curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
-  chmod 755 msfinstall && \
-  ./msfinstall
-```
 
 Para instalar o Kali Linux, recomendamos utilizar uma imagem pré-configurada da máquina virtual Kali Linux e incializá-la com o Virtual box.
 
@@ -42,6 +34,14 @@ Mas também é possível baixar e instalar a distribuição Kali disponível no 
 3. Agora, vamos abrir o VirtualBox e adicionar uma nova máquina. Selecione e abra a imagem do Kali Linux e inicie a máquina virtual.
 
 Agora você pode iniciar o seu Kali. Seu nome de usuário padrão será **root** e sua senha **toor**.
+
+Mas se você quiser instalar o Metasploit como uma ferramenta separada, você pode fazê-lo facilmente em sistemas executados no Linux ou Mac OS X:
+
+```
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  chmod 755 msfinstall && \
+  ./msfinstall
+```
 
 Seja no seu Kali Linux ou após instalar corretamente o framework metasploit, mantenha-o sempre atualizado com o comando:
 
@@ -66,21 +66,21 @@ Dentro do **msfconsole** temos uma infinidade de comandos e seria impossível ex
 
 Quando o Metasploit fo inicializado e o **msfconsole** estiver sendo executado, podemos digitar "help" para obter uma visão geral dos comandos uma descrição:
 
-Com o comando "show" podemos visualizar no console qualquer coleção desejada (payloads, exploits, opções, etc)
+Com o comando show" podemos visualizar no console qualquer coleção desejada (payloads, exploits, opções, etc)
 Ex:
 
 > show exploits
 
-Este comando lista todos os exploits disponíveis, que podem ser selecionados com o comando "use".
+Este comando lista todos os exploits disponíveis, que podem ser selecionados com o comando use"
 
 Ex: 
 > use multi/handler
 
-Quando um exploit é selecionado com o comando use, podemos recuperar informações como nome, plataforma, autor, destinos disponíveis e muito mais usando o comando "info". 
+Quando um exploit é selecionado com o comando use, podemos recuperar informações como nome, plataforma, autor, destinos disponíveis e muito mais usando o comando info" 
 
 ![Info](https://www.hackingtutorials.org/wp-content/uploads/2016/04/Metasploit-info-command-4.jpg)
 
-É possível utilizar o "help" e "show" para obter ajuda com os comandos disponíveis.
+É possível utilizar o help" e "show" para obter ajuda com os comandos disponíveis.
 
 Mergulhe na [documentação](https://metasploit.help.rapid7.com/docs) para aprender sobre outros comandos básicos avançados do framework Metasploit. 
 
@@ -197,15 +197,31 @@ Para isso, insira o comando **`use espia`**.
 
 ![habilitar captura](https://github.com/davicedraz/metasploit/blob/master/img/use_espia.PNG?raw=true)
 
-[Tirar Screenshot](https://www.offensive-security.com/metasploit-unleashed/screen-capture/)
+Agora que a captura de tela foi permitida, basta executar o comando **`screengrab`** para capturar a tela.
 
+### Capturar stream da webcam da vítima
+Agora vamos acessar a webcam da vítima e capturamos o seu stream de vídeo. Mas antes disso, precisamos verificar se a vítima possui uma webcam.
 
-[Hackear Webcam](https://null-byte.wonderhowto.com/how-to/hack-like-pro-secretly-hack-into-switch-on-watch-anyones-webcam-remotely-0142514/)
+Para isso, utilize o comando **`webcam_list`**.
 
+Agora que identificamos que a vítima possui um dispositivo de webcam, vamos verificar se alguém está usando a maquina vítima. Para isso, vamos capturar uma imagem doa câmera. 
+Insira o comando **`webcam_snap`**.
 
+Agora é hora de capturarmos o stream da câmera.  O comando **`run webcam`** captura as imagens da câmera, enquanto o comando **`-p /caminho/de/armazenamento`** indica o caminho onde será salvo as imagens.
+Para este tutorial, vamos utilizar o caminho ***/var/www***.
+Desta forma, insira o comando **`run webcam -p /var/www`**
 
-...
+### Monitorar Tela em Tempo Real
 
+Para espionar o conteúdo na tela do alvo, o comando abaixo irá iniciar um processo na máquina da vítima que transmite em tempo real para a máquina atacante:  
+
+> run vnc
+
+#### Importante!
+
+Como previsto na  **Lei 12.737/2012 no Art. 154-A**. Invadir dispositivo informático alheio, conectado ou não à rede de computadores, mediante violação indevida de mecanismo de segurança e com o fim de obter, adulterar ou destruir dados ou informações sem autorização expressa ou tácita do titular do dispositivo ou instalar vulnerabilidades para obter vantagem ilícita, resultará em  **Pena – detenção, de 3 (três) meses a 1 (um) ano, e multa**.
+
+Lei Nº 12.737, de 30 de novembro de 2012.
 
 **Para fazer o download deste tutorial em PDF, [clique aqui](https://github.com/davicedraz/metasploit).**
 
@@ -225,12 +241,3 @@ https://www.offensive-security.com/metasploit-unleashed/about-meterpreter/
 #
 _“Metasploit is not hacking instant tool, it is an insane framework”_
 ##### Autores: Davi Cedraz e Samuel Alves
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU4ODgzMzk0LDk5OTI3NDcyNywxMjk5Mj
-czMjQ2LDk5OTI3NDcyNywtMzkxNDg2MzcxLC0xNTMyNDYzNjYy
-LC0xODQ4NjgzNDgzLC0yMDE5Mjk1Njk2LDI4MTc0NTYzOSwtNz
-ExMDU2Njc0LDI4MTc0NTYzOSw2MTYyMjMwMDEsLTMxNTU1NDE1
-MCwyMTEzOTg5Nzk1LDEzMTUzODgwNjgsMTMwMDA3MTEzMiw4Mj
-k1Mjg3NDEsMTMwMDA3MTEzMiw1NzM3MjgxOTMsMTA1Mjg5Mzk5
-N119
--->
