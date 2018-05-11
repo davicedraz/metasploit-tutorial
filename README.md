@@ -225,6 +225,20 @@ Lei Nº 12.737, de 30 de novembro de 2012.
 
 **Para fazer o download deste tutorial em PDF, [clique aqui](https://github.com/davicedraz/metasploit/raw/master/README.pdf).**
 
+## Sugestão de Atividade
+
+1. Refazer os passos do tutorial gerando seu próprio payload para plataforma e extensâo da sua escolha (ou um trojan para windows).
+
+2. Infectar uma máquina alvo e executar os comandos de acesso remoto.
+
+
+Entregáveis:
+
+- Payload gerado
+- Screenshot do terminal meterpreter com a conexão reverse_tcp estabelecida
+- Screenshot ou Streamvideo da tela da máquina alvo
+
+
 
 ## Links de referência:
 
